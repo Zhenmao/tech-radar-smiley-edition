@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech Radar Smiley Edition</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Short+Stack&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/doodle.css" />
+    <link rel="stylesheet" href="css/radar.css" />
+  </head>
+  <body class="doodle">
+    <main>
+      <h1>Tech Radar (<span class="smiley">😀</span> Smiley Edition) </h1>
+      <form id="radarParams">
+        <fieldset>
+          <legend>Number of radial levels</legend>
+          <label><input type="radio" name="nRadialLevel" value="2" />2</label>
+          <label><input type="radio" name="nRadialLevel" value="3" />3</label>
+          <label
+            ><input
+              type="radio"
+              name="nRadialLevel"
+              value="4"
+              checked
+            />4</label
+          >
+          <label><input type="radio" name="nRadialLevel" value="5" />5</label>
+        </fieldset>
+        <fieldset>
+          <legend>Number of angular levels</legend>
+          <label><input type="radio" name="nAngularLevel" value="2" />2</label>
+          <label><input type="radio" name="nAngularLevel" value="3" />3</label>
+          <label
+            ><input
+              type="radio"
+              name="nAngularLevel"
+              value="4"
+              checked
+            />4</label
+          >
+          <label><input type="radio" name="nAngularLevel" value="5" />5</label>
+          <label><input type="radio" name="nAngularLevel" value="6" />6</label>
+        </fieldset>
+        <button type="submit">Redraw</button>
+      </form>
+      <section>
+        <div id="radar"></div>
+      </section>
+    </main>
+    <footer>
+      <p
+        >Source code inspired by
+        <a href="https://github.com/zalando/tech-radar" target="_blank"
+          >Zalando Tech Radar</a
+        ></p
+      >
+      <p
+        >Custom bounding force inspired by
+        <a
+          href="https://github.com/vasturiano/d3-force-limit/blob/master/src/limit.js"
+          target="_blank"
+          >d3-force-limit</a
+        ></p
+      >
+      <p
+        >Theme modified from
+        <a href="https://chr15m.github.io/DoodleCSS/" target="_blank"
+          >Doodle CSS</a
+        ></p
+      >
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="js/radar.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
